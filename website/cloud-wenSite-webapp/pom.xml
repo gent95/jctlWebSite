@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>cloud-webSite</artifactId>
+        <groupId>com.jctl.cloud</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cloud-webSite-webapp</artifactId>
+    <packaging>war</packaging>
+    <name>cloud-wenSite-webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--模块-->
+        <dependency>
+            <groupId>com.jctl.cloud</groupId>
+            <artifactId>cloud-webSite-controller</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jctl.cloud</groupId>
+            <artifactId>cloud-webSite-entity</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jctl.cloud</groupId>
+            <artifactId>cloud-webSite-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jctl.cloud</groupId>
+            <artifactId>cloud-webSite-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>cloud-wenSite-webapp</finalName>
+        <!--默认字节码输出位置 不然可能输出两份  -->
+        <outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory>
+        <!--parent pom 与当前模块结合-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
+
+            <!-- war 打包插件, 设定war包名称不带版本号 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <!--打包是忽略此中-->
+                    <packagingExcludes>
+                        WEB-INF/classes/org/apache/ibatis/**,
+                        WEB-INF/classes/org/mybatis/spring/**
+                    </packagingExcludes>
+                    <warSourceExcludes>
+                        static/bootstrap/2.3.1/docs/**,
+                        static/js/**,
+                        static/ckeditor/_samples/**,
+                        static/ckeditor/_source/**,
+                        static/ckfinder/_samples/**,
+                        static/ckfinder/help/**,
+                        static/compressor*/**,
+                        static/jquery-jbox/2.3/docs/**,
+                        static/jquery-jbox/2.3/Skins2/**,
+                        static/jquery-validation/1.11.0/demo/**,
+                        static/jquery-ztree/3.5.12/demo/**,
+                        static/My97DatePicker/docs/**,
+                        static/supcan/doc/**,
+                        static/SuperSlide/demo/**,
+                        static/treeTable/demo/**<!-- , -->
+                        test/**
+                    </warSourceExcludes>
+                    <webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>
+                    <warName>${project.artifactId}</warName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,123 @@
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/hompage.css" />
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#text1").hover(function(){
+				$("#text1 .styleText").addClass("styleText_s");
+				$("#text1 .border_ss").addClass("border_Style");
+				$("#text1 .border_ss .colose").addClass("changeColor");
+				
+			},
+			function(){
+				$("#text1 .styleText").removeClass("styleText_s");
+				$("#text1 .border_ss").removeClass("border_Style");
+				$("#text1 .border_ss .colose").removeClass("changeColor");
+			});
+			$("#text2").hover(function(){
+				$("#text2 .styleText").addClass("styleText_s");
+				$("#text2 .border_ss").addClass("border_Style");
+				$("#text2 .border_ss .colose").addClass("changeColor");
+			},
+			function(){
+				$("#text2 .styleText").removeClass("styleText_s");
+				$("#text2 .border_ss").removeClass("border_Style");
+				$("#text2 .border_ss .colose").removeClass("changeColor");
+			});
+			$("#text3").hover(function(){
+				$("#text3 .styleText").addClass("styleText_s");
+				$("#text3 .border_ss").addClass("border_Style");
+				$("#text3 .border_ss .colose").addClass("changeColor");
+			},
+			function(){
+				$("#text3 .styleText").removeClass("styleText_s");
+				$("#text3 .border_ss").removeClass("border_Style");
+				$("#text3 .border_ss .colose").removeClass("changeColor");
+			});
+	});
+		
+		
+	</script>
+		<body>
+	<div>
+	
+		<div id="myCarousel" class="carousel slide">
+			<!-- 轮播（Carousel）指标 图下面的小圈圈-->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active" style="margin-right: 31px;"></li>
+				<li data-target="#myCarousel" data-slide-to="1" style="margin-right: 31px;"></li>
+				<li data-target="#myCarousel" data-slide-to="2" style="margin-right: 31px;"></li>
+			</ol>   
+			<!-- 轮播（Carousel）的图片 -->
+			<div class="carousel-inner">
+						<div class="item active">
+							<img src="img/banner1.png" alt="First slide">
+						
+						</div>
+						<div class="item">
+							<img src="img/banner2.png" alt="Second slide">
+							
+						</div>
+						<div class="item">
+							<img src="img/banner3.png" alt="Third slide">
+							
+						</div>
+			</div>
+						<!-- 轮播（Carousel）导航(向左向右) -->
+						<a class="carousel-control left" href="#myCarousel"  data-slide="prev">
+							<img src="img/left.png" width="34" height="66" style="margin-top: 269px;"/>
+						</a>
+						<a class="carousel-control right" href="#myCarousel" data-slide="next">
+							<img src="img/right.png" width="34" height="66" style="margin-top: 269px;"/>
+						</a>
+		</div> 
+		<div class="divier-line" >
+			<p class="top_s">行业动态</p>
+		<div class="line"></div>
+		<div class="greed_line"></div>
+		<p class="bottom_s">Company News</p>
+		</div>
+		<div class="context">
+			<div class="context_left"></div>
+			<div class="context_right">
+				<div style="margin-top: 0px;"> 
+					<img src="img/tu2.png"/>
+					<div class="content_text" id="text1">
+						<div class="styleText">北京集萃通联科技有限公司问无为U花蕊和R熊二偶无火啊搜嘎规划法规股爱国好或给我回味</div>
+						<div class="styleTime">2016年11月26日   13:12</div>
+						<div class="border_ss"><a href="#" class="colose">More></a></div>
+						
+					</div>
+				</div>
+				<div>
+					<img src="img/tu3.png"/>
+					<div class="content_text" id="text2">
+						<div class="styleText" >北京集萃通联科技有限公司问无为U花蕊和R熊二偶无火啊搜嘎规划法规股爱国好或给我回味</div>
+						<div class="styleTime">2016年11月26日   13:12</div>
+						<div class="border_ss"><a href="#" class="colose">More></a></div>
+					</div>
+				</div>
+				<div>
+					<img src="img/tu4.png"/>
+					<div class="content_text" id="text3">
+						<div class="styleText" >北京集萃通联科技有限公司问无为U花蕊和R熊二偶无火啊搜嘎规划法规股爱国好或给我回味</div>
+						<div class="styleTime">2016年11月26日   13:12</div>
+						<div class="border_ss"><a href="#" class="colose">More></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<header>
+			<iframe src="footer.html" frameborder="no" width="100%" height="391px"  scrolling="no"></iframe>
+		</header>
+	</body>
+</html>

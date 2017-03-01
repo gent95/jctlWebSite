@@ -1,0 +1,20 @@
+
+.divier-line{height:99px; margin-top: 36px;}
+.top_s{font-style:MicrosoftYaHei ; font-size:24px; text-align: center; margin:0px; padding: 0px;}
+.bottom_s{font-style:MicrosoftYaHei ; font-size:18px; text-align: center; margin-top:0px; margin-bottom: 30px; margin-left: 0px; margin-right: 0px; padding: 0px;}
+.line{border-bottom: 1px solid #efefef; margin: 0px;}
+.greed_line{border-bottom: 6px solid #295a94; width: 39px; margin:auto; margin-top: -3px;}
+.context{height: 447px; margin-top: 0px;}
+.context_left{background-image: url(../img/tu1.png); margin-left: 227px; width: 553px; height: 393px; margin-right: 11px; float: left;}
+.context_right{height: 393px; widows: 630px; float: left;}
+.context_right > div{margin-bottom: 14px;}
+.context_right > div > img{float: left; margin-top: 0px;}
+.content_text{width: 474px; height:122px; background-color:#fbfbfb; margin-left:160px; margin-top: 0px;}
+.styleText{margin-left: 14px;float: left;margin-top: 14px;font-style:MicrosoftYaHei ; font-size:16px; }
+.styleTime{padding-bottom: 18px; font-style:MicrosoftYaHei ; font-size:12px;  color:#949494 ; float: left; margin-bottom: 18px; padding: 0px; margin-top: 27px; margin-left: 14px; width: 350px;}
+.border_ss{width:47px; height: 22px; float: right; margin-right: 26px; margin-left: 0px; margin-top: 27px; margin-bottom: 0px; border: 1px solid #295a94; ; text-align: center;}
+.changeColor{color: #f18a22;}
+.colose:hover{text-decoration: none; color: #295a94;}
+.styleText_s{margin-left: 14px;float: left;margin-top: 14px;font-style:MicrosoftYaHei ; font-size:16px;color: #f18a22; }
+.border_Style{border: 1px solid #f18a22;}
+
